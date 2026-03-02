@@ -840,24 +840,123 @@ h3 {
   .site-nav {
     display: none;
   }
+
+  .product-showcase,
+  .drinks-grid,
+  .story-grid,
+  .sheet-groups {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
+  .inauguracion-bar {
+    padding: 10px 12px;
+  }
+
+  .inauguracion-bar p {
+    line-height: 1.35;
+    letter-spacing: 0.02em;
+  }
+
+  .site-header {
+    position: static;
+    padding: 10px 14px;
+  }
+
+  main {
+    padding: 18px 14px 56px;
+  }
+
+  section {
+    margin-bottom: 52px;
+  }
+
   .header-actions {
     width: 100%;
     justify-content: space-between;
   }
+
+  .brand {
+    font-size: 1.5rem;
+  }
+
+  .quick-circle,
+  .isotipo-btn img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .btn-sm {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .hero-copy {
+    margin-bottom: 16px;
+  }
+
+  .category-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.22rem;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+  }
+
+  .product-card::after {
+    font-size: 0.62rem;
+    padding: 3px 7px;
+  }
+
+  .sheet-group h3 {
+    font-size: 1.55rem;
+  }
+
+  .sheet-grid p {
+    font-size: 1rem;
+  }
+
+  .map-embed iframe {
+    min-height: 250px;
+  }
+
+  .mascota-spy {
+    display: none;
+  }
+
+  #menu .product-showcase,
+  #menu .drinks-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  #menu .product-card,
+  #menu .drink-card {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    min-height: 0;
+  }
+
+  #menu .product-card img,
+  #menu .drink-card img {
+    width: 100%;
+    max-height: none;
+  }
 }
 
 @media (max-width: 580px) {
-  main {
-    padding-top: 20px;
-  }
-
-  section {
-    margin-bottom: 64px;
-  }
-
   .site-header {
     flex-wrap: wrap;
   }
@@ -886,13 +985,5 @@ h3 {
   .sheet-watermark {
     width: 85%;
     opacity: 0.07;
-  }
-
-  .mascota-spy {
-    width: 84px;
-    height: 84px;
-    left: 0;
-    bottom: 6px;
-    animation-duration: 12s;
   }
 }
